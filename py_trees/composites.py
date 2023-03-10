@@ -659,6 +659,13 @@ class Parallel(Composite):
         """
         super(Parallel, self).__init__(name, children)
         self.policy = policy
+        self.name= name
+
+    def __hash__(self):
+        return hash(self.name)
+
+    def __eq__(self, other):
+        return self.name == other.name
 
     def setup(self, **kwargs: int) -> None:
         """
