@@ -442,19 +442,19 @@ def dot_tree(
             common.BlackBoxLevel.BIG_PICTURE: "white",
         }
         if isinstance(node, composites.Selector):
-            print("创建一个Selector")
+            # print("创建一个Selector")
             attributes = ("octagon", "cyan", "black")  # octagon
         elif isinstance(node, composites.Sequence):
-            print("创建一个Sequence")
+            # print("创建一个Sequence")
             attributes = ("box", "orange", "black")
         elif isinstance(node, composites.Parallel):
-            print("创建一个Parallel")
+            # print("创建一个Parallel")
             attributes = ("parallelogram", "gold", "black")
         elif isinstance(node, decorators.Decorator):
-            print("创建一个Decorator")
+            # print("创建一个Decorator")
             attributes = ("ellipse", "ghostwhite", "black")
         else:
-            print("创建一个"+node.name)
+            # print("创建一个"+node.name)
             attributes = ("ellipse", "gray", "black")
         try:
             if node.blackbox_level != common.BlackBoxLevel.NOT_A_BLACKBOX:
